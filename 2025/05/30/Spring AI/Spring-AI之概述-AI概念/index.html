@@ -1,0 +1,658 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Spring AI之概述-AI概念 | XyreOS</title><meta name="keywords" content="Spring AI之概述-AI概念"><meta name="author" content="Xyre,reappealxy@gmail.com"><meta name="copyright" content="Xyre"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Spring AI之概述-AI概念"><meta name="application-name" content="Spring AI之概述-AI概念"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Spring AI之概述-AI概念"><meta property="og:url" content="https://xyre.online/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/index.html"><meta property="og:site_name" content="XyreOS"><meta property="og:description" content="Spring AI之概述-AI概念"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://xyre.online/img/avatar.png"><meta property="article:author" content="Xyre"><meta property="article:tag" content="个人博客"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://xyre.online/img/avatar.png"><meta name="description" content="Spring AI之概述-AI概念"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://xyre.online/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'your-env-id',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":null},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["💻 Java 开发者","🔍 喜欢研究技术细节","🎨 前端爱好者","🚀 目标：成为全栈工程师"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Xyre","link":"链接: ","source":"来源: XyreOS","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'XyreOS',
+  title: 'Spring AI之概述-AI概念',
+  postAI: '',
+  pageFillDescription: '概念本节描述了使用的核心概念我们建议仔细阅读它以了解是如何实现的模型模型是旨在处理和生成信息的算法通常模仿人类的认知功能通过从大型数据集中学习模式和见解这些模型可以进行预测文本图像或其他输出从而增强跨行业的各种应用程序有许多不同类型的模型每种模型都适用于特定的用例虽然及其生成式功能通过文本输入和输出吸引了用户但许多模型和公司提供多样化的输入和输出在之前许多人对文本到图像的生成模型着迷例如和下表根据模型的输入和输出类型对多个模型进行分类图片解析第一行主要阐述了大型语言模型的功能和特点这类模型的核心在于处理和生成语言代码在输入数据方面主要接收语言代码作为其基础信息但它的能力更为宽广因为它可以辅助采用图片音频视频作为多模态信息进行输入这意味着你可以向提供这些不同类型的多媒体内容来丰富它理解任务的上下文或者直接作为任务的一部分例如你可以给它一张图片要求它用文字描述图片内容便会理解图像信息并生成相应的文字描述同样它也能理解音频或视频片段中的信息并依据这些信息结合你用语言或代码下达的核心指令来完成任务在处理完这些多样化的输入后主要的输出成果依然是语言代码然而这种输出也可以伴随音频形式的多模态输出这通常指的是其生成的文本结果可以通过文本转语音技术转换成可以听到的声音或者是模型生成的文本内容本身就是为音频应用比如播客文稿对话脚本等而创作的从而使得信息也能够通过听觉方式进行传递和接收第二行介绍了图像生成模型的运作方式该模型主要接收语言通常指文字描述例如你告诉模型画一只在沙滩上看书的猫和或图像即提供现有的图片作为参考或修改基础作为输入数据类型在处理这些输入信息后图像生成模型会运用其专业能力创造并输出全新的视觉内容具体表现为图像或视频文件因此我们常说的画画文本到图像文生图或图像到图像图生图的应用正是这类模型功能的体现第三行展示了两种紧密相关但方向相反的模型功能分别是文本转语音模型和语音转文本模型当作为文本转语音模型时它接收语言即文字内容作为输入数据类型然后将这些文字信息转换并输出为音频即声音或语音反过来当作为语音转文本模型也常被称为语音识别时它则接收音频例如人的说话声作为输入数据类型并将其中的语音信息识别和转写成语言即文字文本作为输出结果因此图中的第三行实际上概括了人工智能在这两个方向上的应用即将文字内容朗读出来以及将语音内容记录成文字的核心流程第四行介绍的是嵌入模型这种模型非常灵活能够接收多种不同类型的数据作为输入具体包括文本图像音频视频在接收这些多样化的输入后嵌入模型的核心任务是将其转换并输出为向量嵌入这些向量或嵌入是原始数据的一种数值表示形式它们能够捕捉数据的核心语义特征使得不同类型的数据可以在一个统一的向量空间中进行比较或处理常用于相似性搜索推荐系统数据分类或作为其他模型的输入目前支持将输入和输出处理为语言图像和音频的模型上表中的最后一行接受文本作为输入并输出数字通常称为嵌入文本表示模型中使用的内部数据结构支持嵌入以支持更高级的用例像这样的模型的不同之处在于它们的预训练性质如中的所示聊天生成预训练转换器这种预训练功能将转变为不需要广泛的机器学习或模型训练背景的通用开发人员工具提示提示是基于语言的输入的基础引导模型生成特定的输出对于熟悉的人来说提示可能看起来仅仅是在对话框中输入并发送到的文本然而它包含的内容远不止于此在许多模型中提示的文本不仅仅是一个简单的字符串的在一个提示中有多个文本输入每个文本输入都分配有一个角色例如有系统角色它告诉模型如何行为并为交互设置上下文还有用户角色通常是来自用户的输入制作有效的提示既是一门艺术也是一门科学是为人类对话而设计的这与使用之类的东西提出问题完全不同一个人必须与模型进行交流类似于与另一个人交谈正是这种交互方式的重要性以至于这个术语已经成为一门独立的学科有一系列新兴的技术可以提高提示的有效性投入时间制作提示可以大大提高结果输出分享提示已成为一种公共实践并且正在对这一主题进行积极的学术研究作为创建有效提示例如与形成对比是多么违反直觉的一个例子最近的一篇研究论文发现您可以使用的最有效的提示之一以短语开头深呼吸并逐步完成这项工作这应该可以告诉你为什么语言如此重要我们还不完全了解如何最有效地利用这项技术的先前迭代例如更不用说正在开发的新版本了设计有效的提示语这件事不像写查询语句那样有一套非常清晰逻辑化符合我们对计算机指令直觉的成熟方法那种你怎么想就怎么精确地写然后得到精确结果的经验和直觉在提示语的领域可能并不完全适用提示语的有效性有时会以一种出乎我们常规逻辑预料的方式展现出来这正是它的反直觉之处也是它与这类传统的结构化的计算机指令语言形成鲜明对比的地方提示模板创建有效的提示包括建立请求的上下文并将请求的各个部分替换为特定于用户输入的值此过程使用传统的基于文本的模板引擎进行提示创建和管理为此使用了库例如考虑简单的提示模板在中提示模板可以比作架构中的视图提供模型对象通常是来填充模板中的占位符字符串成为提供给模型的提示的内容发送到模型的提示的特定数据格式存在相当大的变化提示最初从简单字符串开始现在已经发展到包含多条消息其中每条消息中的每个字符串代表模型的不同角色嵌入嵌入是文本图像或视频的数字表示形式用于捕获输入之间的关系嵌入的工作原理是将文本图像和视频转换为浮点数数组称为向量这些向量旨在捕获文本图像和视频的含义嵌入数组的长度称为向量的维数通过计算两段文本的向量表示之间的数值距离应用程序可以确定用于生成嵌入向量的对象之间的相似性作为探索的开发人员没有必要理解复杂的数学理论或这些向量表示背后的具体实现对它们在系统中的角色和功能有基本的了解就足够了尤其是在您将功能集成到应用程序中时嵌入在检索增强生成模式等实际应用中尤其相关它们能够将数据表示为语义空间中的点这类似于欧几里得几何的二维空间但维度更高这意味着就像欧几里得几何中平面上的点根据其坐标可以很近或很远一样在语义空间中点的接近反映了含义的相似性关于相似主题的句子在这个多维空间中的位置更近就像图上彼此靠近的点一样这种接近有助于文本分类语义搜索甚至产品推荐等任务因为它允许根据相关概念在这个扩展的语义景观中的位置来识别和分组相关概念您可以将此语义空间视为一个向量想让电脑理解我们人类世界里的东西比如一句话一张图片甚至一段视频电脑本身只认识数字不认识我们说的猫狗或者画出来的猫和狗嵌入就像一个超级翻译官这个翻译官不把中文翻译成英文而是把我们世界里的各种信息文字图片视频翻译成电脑能懂的一串数字这一串数字我们就叫它向量这是嵌入最神奇的地方一旦我们把不同的东西都翻译成了这种数字串向量我们就可以通过计算这些数字串之间的距离来看它们有多相似语义空间我们平时看的地图是二维的有长度和宽度你在地图上标一个点代表一个地方两个点离得近说明这两个地方在地理上也近语义空间也是一个地图但它可能有很多很多维度不只是二维或三维在这个地图上每一个被嵌入翻译过的信息比如一个词一句话一张图片都会变成一个点关键在于在这个语义空间的地图上意思相近的东西它们对应的点就会离得比较近意思差别大的点就离得远比如国王这个词的点可能会离女王这个词的点比较近但会离香蕉这个词的点比较远检索增强生成这是一个很流行的技术模式简单说就是当比如一个聊天机器人要回答你的问题时它先用嵌入技术把你提问的内容和它知识库里的一大堆资料都变成数字串然后它在知识库里找到和你提问的数字串最近也就是最相关的几段资料再结合这些资料来生成答案这样就能给出更准确更有依据的回答了令牌令牌是模型工作原理的构建块在输入时模型将单词转换为令牌在输出时它们将令牌转换回单词在英语中一个词元大约相当于一个词的作为参考莎士比亚全集总共大约个单词翻译成大约万个词元也许更重要的是令牌货币在托管模型的上下文中您的费用由使用的令牌数量决定输入和输出都会影响总令牌计数此外模型还受令牌限制的约束这些限制限制了在单个调用中处理的文本量此阈值通常称为上下文窗口模型不会处理任何超过此限制的文本例如有代币限制而提供不同的选项例如和的模型具有代币限制而最近的研究产生了代币限制模型要使用总结莎士比亚的收集作品您需要设计软件工程策略来切碎数据并在模型的上下文窗口限制内呈现数据项目可以帮助您完成此任务结构化输出模型的输出传统上以的形式到达即使您要求回复为它可能是正确的但它不是数据结构它只是一个字符串此外在提示中请求并非准确这种复杂性导致了一个专业领域的出现该领域涉及创建提示以产生预期的输出然后将生成的简单字符串转换为可用于应用程序集成的数据结构结构化输出转换采用精心设计的提示通常需要与模型进行多次交互才能获得所需的格式将您的数据和引入模型如何为模型配备尚未训练的信息请注意数据集仅延长至年月因此该模型表示它不知道需要该日期之后知识的问题的答案一个有趣的琐事是这个数据集大约有有三种技术可用于自定义模型以合并您的数据微调这种传统的机器学习技术涉及定制模型和更改其内部权重然而对于机器学习专家来说这是一个具有挑战性的过程并且由于等模型的大小它非常耗费资源此外某些型号可能不提供此选项一种更实用的替代方案涉及将数据嵌入到提供给模型的提示中给定模型的限制需要技术在模型的上下文窗口中呈现相关数据这种方法俗称填充提示库可帮助您实现基于填充提示技术的解决方案也称为检索增强生成工具调用该技术允许注册将大型语言模型连接到外部系统的工具用户定义的服务大大简化了您需要编写以支持工具调用的代码检索增强一代一种称为检索增强生成的技术已经出现用于解决将相关数据纳入提示以实现准确模型响应的挑战该方法涉及批处理风格的编程模型其中作业从您的文档中读取非结构化数据对其进行转换然后将其写入矢量数据库从高层次上讲这是一个提取转换和加载管道矢量数据库用于技术的检索部分作为将非结构化数据加载到矢量数据库的一部分最重要的转换之一是将原始文档拆分为更小的部分将原始文档拆分为较小部分的过程有两个重要步骤将文档拆分为多个部分同时保留内容的语义边界例如对于包含段落和表格的文档应避免在段落或表格的中间拆分文档对于代码请避免在方法实现的中间拆分代码将文档的各个部分进一步拆分为大小占模型令牌限制的一小部分的下一阶段是处理用户输入当模型要回答用户的问题时问题和所有相似文档片段都会被放入发送到模型的提示中这就是使用矢量数据库的原因它非常擅长寻找相似的内容管道提供了有关编排从数据源提取数据并将其存储在结构化向量存储中的流程的更多信息从而确保数据在传递给模型时处于最佳检索格式介绍了如何使用在应用程序中启用功能工具调用大型语言模型在训练后被冻结导致知识过时并且无法访问或修改外部数据工具调用机制解决了这些缺点它允许您将自己的服务注册为工具以将大型语言模型连接到外部系统的这些系统可以为提供实时数据并代表它们执行数据处理作大大简化了您需要编写以支持工具调用的代码它为您处理工具调用对话您可以将工具作为注释的方法提供并在提示选项中提供它以使其可供模型使用此外您可以在单个提示中定义和引用多个工具当我们想要使工具可供模型使用时我们会在聊天请求中包含其定义每个工具定义都包含名称描述和输入参数的架构当模型决定调用工具时它会发送一个响应其中包含工具名称和输入参数这些参数在定义的架构之后建模应用程序负责使用工具名称来识别和执行具有提供的输入参数的工具工具调用的结果由应用程序处理应用程序将工具调用结果发送回模型该模型使用作为附加上下文生成最终响应有关如何将此功能与不同模型一起使用的更多信息请遵循工具调用文档评估响应根据用户请求有效评估系统的输出对于确保最终应用程序的准确性和有用性非常重要几种新兴技术允许使用预训练模型本身来实现此目的此评估过程涉及分析生成的响应是否与用户的意图和查询的上下文一致相关性连贯性和事实正确性等指标用于衡量生成的响应的质量一种方法涉及将用户的请求和模型的响应呈现给模型查询响应是否与提供的数据一致此外利用向量数据库中存储的信息作为补充数据可以增强评估过程有助于确定响应相关性项目提供了一个它目前可以访问评估模型响应的基本策略有关详细信息请遵循评估测试文档',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2025-05-30 22:44:12',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/avatar.png"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">XyreOS</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/qrcode-wechat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/qrcode-wechat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI-Song-Maker-%E5%9C%A8%E7%BA%BFAI%E6%AD%8C%E6%9B%B2%E7%94%9F%E6%88%90%E5%99%A8/" style="font-size: 1.05rem;">AI Song Maker-在线AI歌曲生成器<sup>1</sup></a><a href="/tags/CSDN%E6%96%87%E7%AB%A0%E8%A7%A3%E9%94%81%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">CSDN文章解锁工具<sup>1</sup></a><a href="/tags/Char%E5%92%8CCharacter/" style="font-size: 1.05rem;">Char和Character<sup>1</sup></a><a href="/tags/Chrome%E4%B8%80%E9%94%AE%E8%A7%A3%E9%99%A4%E5%A4%8D%E5%88%B6/" style="font-size: 1.05rem;">Chrome一键解除复制<sup>1</sup></a><a href="/tags/ComicBrief-AI%E6%BC%AB%E7%94%BB%E7%94%9F%E6%88%90%E5%99%A8/" style="font-size: 1.05rem;">ComicBrief-AI漫画生成器<sup>1</sup></a><a href="/tags/DeepWiki-github%E7%99%BE%E7%A7%91%E5%85%A8%E4%B9%A6/" style="font-size: 1.05rem;">DeepWiki-github百科全书<sup>1</sup></a><a href="/tags/Deskreen-%E7%94%B5%E8%84%91%E6%97%A0%E7%BA%BF%E5%89%AF%E5%B1%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">Deskreen-电脑无线副屏工具<sup>1</sup></a><a href="/tags/Excel%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99/" style="font-size: 1.05rem;">Excel自动填写<sup>1</sup></a><a href="/tags/FastFind-%E5%85%A8%E7%9B%98%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem;">FastFind-全盘文件搜索软件<sup>1</sup></a><a href="/tags/Get-Z-Library/" style="font-size: 1.05rem;">Get Z-Library<sup>1</sup></a><a href="/tags/HTTP/" style="font-size: 1.05rem;">HTTP<sup>1</sup></a><a href="/tags/InputTip-%E4%B8%80%E4%B8%AA%E5%AE%9E%E6%97%B6%E7%9A%84%E8%BE%93%E5%85%A5%E6%B3%95%E7%8A%B6%E6%80%81%E6%8F%90%E7%A4%BA%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">InputTip-一个实时的输入法状态提示工具<sup>1</sup></a><a href="/tags/Integer%E5%92%8Cint/" style="font-size: 1.05rem;">Integer和int<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>1</sup></a><a href="/tags/Java%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 1.05rem;">Java面试题<sup>1</sup></a><a href="/tags/Mindows-%E7%BB%99%E4%BD%A0%E7%9A%84Android%E5%88%B7%E4%B8%8AWindows/" style="font-size: 1.05rem;">Mindows-给你的Android刷上Windows<sup>1</sup></a><a href="/tags/MyPublicWiFi-%E2%80%93-%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%97%A0%E7%BA%BF%E7%83%AD%E7%82%B9%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">MyPublicWiFi – 功能强大的无线热点共享工具<sup>1</sup></a><a href="/tags/NovaAI%E5%B7%A5%E5%85%B7%E7%AE%B1/" style="font-size: 1.05rem;">NovaAI工具箱<sup>1</sup></a><a href="/tags/PortableApps%EF%BC%88%E4%BE%BF%E6%90%BA%E5%BC%8F%E5%BA%94%E7%94%A8%EF%BC%89%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99/" style="font-size: 1.05rem;">PortableApps（便携式应用）一个免费的软件下载网站<sup>1</sup></a><a href="/tags/Servlet/" style="font-size: 1.05rem;">Servlet<sup>1</sup></a><a href="/tags/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/" style="font-size: 1.05rem;">Spring AI之概述-AI概念<sup>1</sup></a><a href="/tags/TrimSpace-%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">TrimSpace-免费在线图片处理工具<sup>1</sup></a><a href="/tags/ZIPCracker-%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">ZIPCracker-强大的文件密码破解工具<sup>1</sup></a><a href="/tags/animefeet/" style="font-size: 1.05rem;">animefeet<sup>1</sup></a><a href="/tags/chatgpt/" style="font-size: 1.05rem;">chatgpt<sup>1</sup></a><a href="/tags/deepseek/" style="font-size: 1.05rem;">deepseek<sup>1</sup></a><a href="/tags/remove-photos/" style="font-size: 1.05rem;">remove.photos<sup>1</sup></a><a href="/tags/win%E7%B3%BB%E7%BB%9F%E6%A1%8C%E9%9D%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">win系统桌面管理工具<sup>1</sup></a><a href="/tags/zPaste-Windows%E5%89%AA%E5%88%87%E6%9D%BF%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">zPaste-Windows剪切板管理工具<sup>1</sup></a><a href="/tags/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BB-JetBrains-%E5%85%A8%E5%AE%B6%E6%A1%B6/" style="font-size: 1.05rem;">一键激活 JetBrains 全家桶<sup>1</sup></a><a href="/tags/%E4%B8%8A%E7%8F%AD%E7%9C%8B%E5%B0%8F%E8%AF%B4%E9%98%85%E8%AF%BB%E5%99%A8-%E9%9A%90%E8%94%BD%E5%BC%8F%E5%B0%8F%E8%AF%B4%E9%98%85%E8%AF%BB%E5%99%A8/" style="font-size: 1.05rem;">上班看小说阅读器-隐蔽式小说阅读器<sup>1</sup></a><a href="/tags/%E4%BB%A3%E7%A0%81%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">代码美化<sup>1</sup></a><a href="/tags/%E5%9C%A8%E7%BA%BF%E6%9D%A1%E7%A0%81%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">在线条码生成工具<sup>1</sup></a><a href="/tags/%E5%9C%A8%E7%BA%BF%E7%94%B5%E5%AD%90%E4%B9%A6%E9%98%85%E8%AF%BB/" style="font-size: 1.05rem;">在线电子书阅读<sup>1</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0%E9%80%9A%E8%87%AA%E5%8A%A8%E5%88%B7%E9%A2%98/" style="font-size: 1.05rem;">学习通自动刷题<sup>1</sup></a><a href="/tags/%E5%AE%9E%E6%97%B6%E5%B7%A5%E8%B5%84%E8%AE%A1%E7%AE%97%E5%99%A8/" style="font-size: 1.05rem;">实时工资计算器<sup>1</sup></a><a href="/tags/%E5%B0%8F%E6%97%BAAI%E6%88%AA%E5%9B%BE/" style="font-size: 1.05rem;">小旺AI截图<sup>1</sup></a><a href="/tags/%E6%96%87%E6%A1%88%E6%8F%90%E5%8F%96%E5%8A%A9%E6%89%8B/" style="font-size: 1.05rem;">文案提取助手<sup>1</sup></a><a href="/tags/%E7%89%9B%E4%BA%BA%E5%BF%AB%E8%B7%91-%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E7%9A%84%E6%B1%82%E8%81%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">牛人快跑 - 一款开源的求职自动化工具<sup>1</sup></a><a href="/tags/%E8%9E%BA%E8%9B%B3%E7%B2%89%E7%81%AB%E9%94%85/" style="font-size: 1.05rem;">螺蛳粉火锅<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">35</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">21</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">转载</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Spring-AI/" itemprop="url">Spring AI</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Spring AI之概述-AI概念</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Spring AI之概述-AI概念</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-05-30T13:33:49.000Z" title="发表于 2025-05-30 21:33:49">2025-05-30</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-05-30T14:44:12.000Z" title="更新于 2025-05-30 22:44:12">2025-05-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">5.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为重庆"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>重庆</span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="https://xyre.online/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/"><header><a class="post-meta-categories" href="/categories/Spring-AI/" itemprop="url">Spring AI</a><a href="/tags/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/" tabindex="-1" itemprop="url">Spring AI之概述-AI概念</a><h1 id="CrawlerTitle" itemprop="name headline">Spring AI之概述-AI概念</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Re-xy</span><time itemprop="dateCreated datePublished" datetime="2025-05-30T13:33:49.000Z" title="发表于 2025-05-30 21:33:49">2025-05-30</time><time itemprop="dateCreated datePublished" datetime="2025-05-30T14:44:12.000Z" title="更新于 2025-05-30 22:44:12">2025-05-30</time></header><p>#AI 概念</p>
+<p>本节描述了 Spring AI 使用的核心概念。我们建议仔细阅读它，以了解 Spring AI 是如何实现的。</p>
+<p>##模型（Models）</p>
+<p>AI 模型是旨在处理和生成信息的算法，通常模仿人类的认知功能。通过从大型数据集中学习模式和见解，这些模型可以进行预测、文本、图像或其他输出，从而增强跨行业的各种应用程序。</p>
+<p>有许多不同类型的 AI 模型，每种模型都适用于特定的用例。虽然 ChatGPT 及其生成式 AI 功能通过文本输入和输出吸引了用户，但许多模型和公司提供多样化的输入和输出。在 ChatGPT 之前，许多人对文本到图像的生成模型着迷，例如 Midjourney 和 Stable Diffusion。</p>
+<p>下表根据模型的输入和输出类型对多个模型进行分类：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/../../img/springai01.jpg" alt="pringai0"></p>
+<blockquote>
+<p><strong>图片解析：第一行主要阐述了“大型语言模型（LLM）”的功能和特点。这类模型的核心在于处理和生成“语言&#x2F;代码”。在输入数据方面，LLM主要接收“语言&#x2F;代码”作为其基础信息，但它的能力更为宽广，因为它可以“辅助采用图片、音频、视频作为多模态信息”进行输入。这意味着你可以向LLM提供这些不同类型的多媒体内容来丰富它理解任务的上下文，或者直接作为任务的一部分——例如，你可以给它一张图片，要求它用文字描述图片内容，LLM便会理解图像信息并生成相应的文字描述；同样，它也能理解音频或视频片段中的信息，并依据这些信息结合你用语言或代码下达的核心指令来完成任务。在处理完这些多样化的输入后，LLM主要的输出成果依然是“语言&#x2F;代码”。然而，这种输出也可以“伴随音频形式的多模态输出”，这通常指的是其生成的文本结果可以通过文本转语音（TTS）技术转换成可以听到的声音，或者是模型生成的文本内容本身就是为音频应用（比如播客文稿、对话脚本等）而创作的，从而使得信息也能够通过听觉方式进行传递和接收。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>第二行介绍了“图像生成模型 (Image Generation Model)”的运作方式。该模型主要接收“语言”（通常指文字描述，例如你告诉模型“画一只在沙滩上看书的猫”）和&#x2F;或“图像”（即提供现有的图片作为参考或修改基础）作为输入数据类型。在处理这些输入信息后，图像生成模型会运用其专业能力，创造并输出全新的视觉内容，具体表现为“图像”或“视频”文件。因此，我们常说的“AI画画”、文本到图像（文生图）或图像到图像（图生图）的应用，正是这类模型功能的体现。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>第三行展示了两种紧密相关但方向相反的AI模型功能，分别是“文本转语音模型 (Text-to-Voice Model)”和“语音转文本模型 (Voice-to-Text Model)”。当作为文本转语音模型时，它接收“语言”（即文字内容）作为输入数据类型，然后将这些文字信息转换并输出为“音频”（即声音或语音）。反过来，当作为语音转文本模型（也常被称为语音识别）时，它则接收“音频”（例如人的说话声）作为输入数据类型，并将其中的语音信息识别和转写成“语言”（即文字文本）作为输出结果。因此，图中的第三行实际上概括了人工智能在这两个方向上的应用：即将文字内容朗读出来，以及将语音内容记录成文字的核心流程。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>第四行介绍的是“嵌入模型 (Embedding Model)”。这种模型非常灵活，能够接收多种不同类型的数据作为输入，具体包括“文本&#x2F;图像&#x2F;音频&#x2F;视频 (Text&#x2F;Image&#x2F;Audio&#x2F;Video)”。在接收这些多样化的输入后，嵌入模型的核心任务是将其转换并输出为“向量&#x2F;嵌入 (Vector&#x2F;Embedding)”。这些向量或嵌入是原始数据的一种数值表示形式，它们能够捕捉数据的核心语义特征，使得不同类型的数据可以在一个统一的向量空间中进行比较或处理，常用于相似性搜索、推荐系统、数据分类或作为其他AI模型的输入。</strong></p>
+</blockquote>
+<p>Spring AI 目前支持将输入和输出处理为语言、图像和音频的模型。上表中的最后一行接受文本作为输入并输出数字，通常称为嵌入文本，表示 AI 模型中使用的内部数据结构。Spring AI 支持嵌入以支持更高级的用例。</p>
+<p>像 GPT 这样的模型的不同之处在于它们的预训练性质，如 GPT 中的“P”所示——聊天生成预训练转换器。这种预训练功能将 AI 转变为不需要广泛的机器学习或模型训练背景的通用开发人员工具。</p>
+<p>##提示（Prompts）</p>
+<p>提示是基于语言的输入的基础，引导 AI 模型生成特定的输出。对于熟悉 ChatGPT 的人来说，提示可能看起来仅仅是在对话框中输入并发送到 API 的文本。然而，它包含的内容远不止于此。在许多 AI 模型中，提示的文本不仅仅是一个简单的字符串。</p>
+<p>ChatGPT 的 API 在一个提示中有多个文本输入，每个文本输入都分配有一个角色。例如，有系统角色，它告诉模型如何行为并为交互设置上下文。还有用户角色，通常是来自用户的输入。</p>
+<p>制作有效的提示既是一门艺术，也是一门科学。ChatGPT 是为人类对话而设计的。这与使用 SQL 之类的东西“提出问题”完全不同。一个人必须与 AI 模型进行交流，类似于与另一个人交谈。</p>
+<p>正是这种交互方式的重要性，以至于 “Prompt Engineering” 这个术语已经成为一门独立的学科。有一系列新兴的技术可以提高提示的有效性。投入时间制作提示可以大大提高结果输出。</p>
+<p>分享提示已成为一种公共实践，并且正在对这一主题进行积极的学术研究。作为创建有效提示（例如，与 SQL 形成对比）是多么违反直觉的一个例子， 最近的一篇研究论文发现(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2205.11916)%EF%BC%8C%E6%82%A8%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E7%9A%84%E6%9C%80%E6%9C%89%E6%95%88%E7%9A%84%E6%8F%90%E7%A4%BA%E4%B9%8B%E4%B8%80%E4%BB%A5%E7%9F%AD%E8%AF%AD%E5%BC%80%E5%A4%B4%EF%BC%8C%E2%80%9C%E6%B7%B1%E5%91%BC%E5%90%B8%E5%B9%B6%E9%80%90%E6%AD%A5%E5%AE%8C%E6%88%90%E8%BF%99%E9%A1%B9%E5%B7%A5%E4%BD%9C%E3%80%82%E2%80%9D">https://arxiv.org/abs/2205.11916)，您可以使用的最有效的提示之一以短语开头，“深呼吸并逐步完成这项工作。”</a> 这应该可以告诉你为什么语言如此重要。我们还不完全了解如何最有效地利用这项技术的先前迭代，例如 ChatGPT 3.5，更不用说正在开发的新版本了。</p>
+<blockquote>
+<p>设计有效的 AI 提示语这件事，不像写 SQL 查询语句那样，有一套非常清晰、逻辑化、符合我们对计算机指令直觉的成熟方法。SQL 那种“你怎么想，就怎么精确地写，然后得到精确结果”的经验和直觉，在 AI 提示语的领域可能并不完全适用。AI 提示语的有效性有时会以一种出乎我们常规逻辑预料的方式展现出来，这正是它的“反直觉”之处，也是它与 SQL 这类传统的、结构化的计算机指令语言形成鲜明对比的地方。</p>
+</blockquote>
+<p>##提示模板</p>
+<p>创建有效的提示包括建立请求的上下文，并将请求的各个部分替换为特定于用户输入的值。</p>
+<p>此过程使用传统的基于文本的模板引擎进行提示创建和管理。Spring AI 为此使用了 OSS 库 StringTemplate(<a target="_blank" rel="noopener" href="https://www.stringtemplate.org/)%E3%80%82">https://www.stringtemplate.org/)。</a></p>
+<p>例如，考虑简单的提示模板：</p>
+<figure class="highlight plaintext"><figcaption><span>me a &#123;adjective&#125; joke about &#123;content&#125;.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tell me a &#123;adjective&#125; joke about &#123;content&#125;.</span><br></pre></td></tr></table></figure>
+
+<p>在 Spring AI 中，提示模板可以比作 Spring MVC 架构中的“视图”。提供模型对象（通常是 java.util.Map）来填充模板中的占位符。“rendered” 字符串成为提供给 AI 模型的提示的内容。</p>
+<p>发送到模型的提示的特定数据格式存在相当大的变化。提示最初从简单字符串开始，现在已经发展到包含多条消息，其中每条消息中的每个字符串代表模型的不同角色。</p>
+<p>##嵌入（Embeddings）</p>
+<p>嵌入是文本、图像或视频的数字表示形式，用于捕获输入之间的关系。</p>
+<p>嵌入的工作原理是将文本、图像和视频转换为浮点数数组（称为向量）。这些向量旨在捕获文本、图像和视频的含义。嵌入数组的长度称为向量的维数。</p>
+<p>通过计算两段文本的向量表示之间的数值距离，应用程序可以确定用于生成嵌入向量的对象之间的相似性。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/../../img/spring-ai-embeddings.jpg" alt="pring-ai-embedding"></p>
+<p>作为探索 AI 的 Java 开发人员，没有必要理解复杂的数学理论或这些向量表示背后的具体实现。对它们在 AI 系统中的角色和功能有基本的了解就足够了，尤其是在您将 AI 功能集成到应用程序中时。</p>
+<p>嵌入在检索增强生成 （RAG） 模式等实际应用中尤其相关。它们能够将数据表示为语义空间中的点，这类似于欧几里得几何的二维空间，但维度更高。这意味着就像欧几里得几何中平面上的点根据其坐标可以很近或很远一样，在语义空间中，点的接近反映了含义的相似性。关于相似主题的句子在这个多维空间中的位置更近，就像图上彼此靠近的点一样。这种接近有助于文本分类、语义搜索甚至产品推荐等任务，因为它允许 AI 根据相关概念在这个扩展的语义景观中的“位置”来识别和分组相关概念。</p>
+<p>您可以将此语义空间视为一个向量。</p>
+<blockquote>
+<p>想让电脑理解我们人类世界里的东西，比如一句话、一张图片，甚至一段视频。电脑本身只认识数字，不认识我们说的“猫”、“狗”或者画出来的猫和狗。“嵌入”就像一个超级翻译官 👨‍💻。这个翻译官不把中文翻译成英文，而是把我们世界里的各种信息（文字、图片、视频）“翻译”成电脑能懂的一串数字。这一串数字，我们就叫它向量 (Vector)。这是“嵌入”最神奇的地方！一旦我们把不同的东西都翻译成了这种数字串（向量），我们就可以通过计算这些数字串之间的“距离”来看它们有多相似。</p>
+</blockquote>
+<blockquote>
+<p>语义空间：我们平时看的地图是二维的（有长度和宽度），你在地图上标一个点，代表一个地方。两个点离得近，说明这两个地方在地理上也近。<br>“语义空间”也是一个“地图”，但它可能有很多很多维度（不只是二维或三维）。在这个地图上，每一个被“嵌入”翻译过的信息（比如一个词、一句话、一张图片）都会变成一个点。<br>关键在于：在这个语义空间的“地图”上，意思相近的东西，它们对应的点就会离得比较近；意思差别大的，点就离得远。比如，“国王”这个词的点，可能会离“女王”这个词的点比较近，但会离“香蕉”这个词的点比较远。</p>
+</blockquote>
+<blockquote>
+<p>检索增强生成 (RAG)：这是一个很流行的AI技术模式。简单说，就是当AI（比如一个聊天机器人）要回答你的问题时，它先用“嵌入”技术把你提问的内容，和它知识库里的一大堆资料都变成数字串。然后，它在知识库里找到和你提问的数字串最“近”（也就是最相关）的几段资料，再结合这些资料来生成答案。这样AI就能给出更准确、更有依据的回答了。</p>
+</blockquote>
+<p>##令 牌（Tokens）</p>
+<p>令牌是 AI 模型工作原理的构建块。在输入时，模型将单词转换为令牌。在输出时，它们将令牌转换回单词。</p>
+<p>在英语中，一个词元大约相当于一个词的 75%。作为参考，莎士比亚全集总共大约 900,000 个单词，翻译成大约 120 万个词元。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/../../img/spring-ai-concepts-tokens.png" alt="pring-ai-concepts-token"></p>
+<p>也许更重要的是，令牌 &#x3D; 货币。在托管 AI 模型的上下文中，您的费用由使用的令牌数量决定。输入和输出都会影响总令牌计数。</p>
+<p>此外，模型还受令牌限制的约束，这些限制限制了在单个 API 调用中处理的文本量。此阈值通常称为“上下文窗口”。模型不会处理任何超过此限制的文本。</p>
+<p>例如，ChatGPT3 有 4K 代币限制，而 GPT4 提供不同的选项，例如 8K、16K 和 32K。Anthropic 的 Claude AI 模型具有 100K 代币限制，而 Meta 最近的研究产生了 1M 代币限制模型。</p>
+<p>要使用 GPT4 总结莎士比亚的收集作品，您需要设计软件工程策略来切碎数据并在模型的上下文窗口限制内呈现数据。Spring AI 项目可以帮助您完成此任务。</p>
+<p>##结构化输出</p>
+<p>AI 模型的输出传统上以 java.lang.String 的形式到达，即使您要求回复为 JSON。它可能是正确的 JSON，但它不是 JSON 数据结构。它只是一个字符串。此外，在提示中请求“for JSON”并非 100% 准确。</p>
+<p>这种复杂性导致了一个专业领域的出现，该领域涉及创建提示以产生预期的输出，然后将生成的简单字符串转换为可用于应用程序集成的数据结构。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/../../img/structured-output-architecture.jpg" alt="tructured-output-architectur"></p>
+<p>结构化输出转换(<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/api/structured-output-converter.html#_structuredoutputconverter)%E9%87%87%E7%94%A8%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%8F%90%E7%A4%BA%EF%BC%8C%E9%80%9A%E5%B8%B8%E9%9C%80%E8%A6%81%E4%B8%8E%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E5%A4%9A%E6%AC%A1%E4%BA%A4%E4%BA%92%E6%89%8D%E8%83%BD%E8%8E%B7%E5%BE%97%E6%89%80%E9%9C%80%E7%9A%84%E6%A0%BC%E5%BC%8F%E3%80%82">https://docs.spring.io/spring-ai/reference/api/structured-output-converter.html#_structuredoutputconverter)采用精心设计的提示，通常需要与模型进行多次交互才能获得所需的格式。</a></p>
+<p>##将您的数据和 API 引入 AI 模型</p>
+<p>如何为 AI 模型配备尚未训练的信息？</p>
+<p>请注意，GPT 3.5&#x2F;4.0 数据集仅延长至 2021 年 9 月。因此，该模型表示它不知道需要该日期之后知识的问题的答案。一个有趣的琐事是，这个数据集大约有 650GB。</p>
+<p>有三种技术可用于自定义 AI 模型以合并您的数据：</p>
+<ul>
+<li>微调 ：这种传统的机器学习技术涉及定制模型和更改其内部权重。然而，对于机器学习专家来说，这是一个具有挑战性的过程，并且由于 GPT 等模型的大小，它非常耗费资源。此外，某些型号可能不提供此选项。</li>
+<li>Prompt Stuffing：一种更实用的替代方案涉及将数据嵌入到提供给模型的提示中。给定模型的 token 限制，需要技术在模型的上下文窗口中呈现相关数据。这种方法俗称 “填充提示”。Spring AI 库可帮助您实现基于“填充提示”技术的解决方案，也称为检索增强生成 （RAG）(<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/concepts.html#concept-rag)%E3%80%82">https://docs.spring.io/spring-ai/reference/concepts.html#concept-rag)。</a></li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/../../img/spring-ai-prompt-stuffing.jpg" alt="pring-ai-prompt-stuffin"></p>
+<ul>
+<li>工具调用 (<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/concepts.html#concept-fc)%EF%BC%9A%E8%AF%A5%E6%8A%80%E6%9C%AF%E5%85%81%E8%AE%B8%E6%B3%A8%E5%86%8C%E5%B0%86%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E8%BF%9E%E6%8E%A5%E5%88%B0%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F">https://docs.spring.io/spring-ai/reference/concepts.html#concept-fc)：该技术允许注册将大型语言模型连接到外部系统</a> API 的工具（用户定义的服务）。Spring AI 大大简化了您需要编写以支持工具调用(<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/api/tools.html)%E7%9A%84%E4%BB%A3%E7%A0%81%E3%80%82">https://docs.spring.io/spring-ai/reference/api/tools.html)的代码。</a></li>
+</ul>
+<p>##检索增强一代</p>
+<p>一种称为检索增强生成 （RAG） 的技术已经出现，用于解决将相关数据纳入提示以实现准确 AI 模型响应的挑战。</p>
+<p>该方法涉及批处理风格的编程模型，其中作业从您的文档中读取非结构化数据，对其进行转换，然后将其写入矢量数据库。从高层次上讲，这是一个 ETL（提取、转换和加载）管道。矢量数据库用于 RAG 技术的检索部分。</p>
+<p>作为将非结构化数据加载到矢量数据库的一部分，最重要的转换之一是将原始文档拆分为更小的部分。将原始文档拆分为较小部分的过程有两个重要步骤：</p>
+<ul>
+<li>将文档拆分为多个部分，同时保留内容的语义边界。例如，对于包含段落和表格的文档，应避免在段落或表格的中间拆分文档。对于代码，请避免在方法实现的中间拆分代码。</li>
+<li>将文档的各个部分进一步拆分为大小占 AI 模型令牌限制的一小部分。</li>
+</ul>
+<p>RAG 的下一阶段是处理用户输入。当 AI 模型要回答用户的问题时，问题和所有“相似”文档片段都会被放入发送到 AI 模型的提示中。这就是使用矢量数据库的原因。它非常擅长寻找相似的内容。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/../../img/spring-ai-rag.jpg" alt="pring-ai-ra"></p>
+<ul>
+<li>ETL 管道(<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/api/etl-pipeline.html)%E6%8F%90%E4%BE%9B%E4%BA%86%E6%9C%89%E5%85%B3%E7%BC%96%E6%8E%92%E4%BB%8E%E6%95%B0%E6%8D%AE%E6%BA%90%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%B0%86%E5%85%B6%E5%AD%98%E5%82%A8%E5%9C%A8%E7%BB%93%E6%9E%84%E5%8C%96%E5%90%91%E9%87%8F%E5%AD%98%E5%82%A8%E4%B8%AD%E7%9A%84%E6%B5%81%E7%A8%8B%E7%9A%84%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF%EF%BC%8C%E4%BB%8E%E8%80%8C%E7%A1%AE%E4%BF%9D%E6%95%B0%E6%8D%AE%E5%9C%A8%E4%BC%A0%E9%80%92%E7%BB%99">https://docs.spring.io/spring-ai/reference/api/etl-pipeline.html)提供了有关编排从数据源提取数据并将其存储在结构化向量存储中的流程的更多信息，从而确保数据在传递给</a> AI 模型时处于最佳检索格式。</li>
+<li>ChatClient - RAG (<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/api/chatclient.html#_retrieval_augmented_generation)%E4%BB%8B%E7%BB%8D%E4%BA%86%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8">https://docs.spring.io/spring-ai/reference/api/chatclient.html#_retrieval_augmented_generation)介绍了如何使用</a> QuestionAnswerAdvisor 在应用程序中启用 RAG 功能。</li>
+</ul>
+<p>##工具调用</p>
+<p>大型语言模型 （LLM） 在训练后被冻结，导致知识过时，并且无法访问或修改外部数据。</p>
+<p>工具调用(<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/api/tools.html)%E6%9C%BA%E5%88%B6%E8%A7%A3%E5%86%B3%E4%BA%86%E8%BF%99%E4%BA%9B%E7%BC%BA%E7%82%B9%E3%80%82%E5%AE%83%E5%85%81%E8%AE%B8%E6%82%A8%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%BA%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%BB%A5%E5%B0%86%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E8%BF%9E%E6%8E%A5%E5%88%B0%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F%E7%9A%84">https://docs.spring.io/spring-ai/reference/api/tools.html)机制解决了这些缺点。它允许您将自己的服务注册为工具，以将大型语言模型连接到外部系统的</a> API。这些系统可以为 LLM 提供实时数据，并代表它们执行数据处理作。</p>
+<p>Spring AI 大大简化了您需要编写以支持工具调用的代码。它为您处理工具调用对话。您可以将工具作为 @Tool 注释的方法提供，并在提示选项中提供它，以使其可供模型使用。此外，您可以在单个提示中定义和引用多个工具。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/../../img/tool-calling-01.jpg" alt="ool-calling-0"></p>
+<ol>
+<li>当我们想要使工具可供模型使用时，我们会在聊天请求中包含其定义。每个工具定义都包含名称、描述和输入参数的架构。</li>
+<li>当模型决定调用工具时，它会发送一个响应，其中包含工具名称和输入参数，这些参数在定义的架构之后建模。</li>
+<li>应用程序负责使用工具名称来识别和执行具有提供的输入参数的工具。</li>
+<li>工具调用的结果由应用程序处理。</li>
+<li>应用程序将工具调用结果发送回模型。</li>
+<li>该模型使用 tool call result 作为附加上下文生成最终响应。</li>
+</ol>
+<p>有关如何将此功能与不同 AI 模型一起使用的更多信息，请遵循工具调用(<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/api/tools.html)%E6%96%87%E6%A1%A3%E3%80%82">https://docs.spring.io/spring-ai/reference/api/tools.html)文档。</a></p>
+<p>##评估 AI 响应</p>
+<p>根据用户请求有效评估 AI 系统的输出对于确保最终应用程序的准确性和有用性非常重要。几种新兴技术允许使用预训练模型本身来实现此目的。</p>
+<p>此评估过程涉及分析生成的响应是否与用户的意图和查询的上下文一致。相关性、连贯性和事实正确性等指标用于衡量 AI 生成的响应的质量。</p>
+<p>一种方法涉及将用户的请求和 AI 模型的响应呈现给模型，查询响应是否与提供的数据一致。</p>
+<p>此外，利用向量数据库中存储的信息作为补充数据可以增强评估过程，有助于确定响应相关性。</p>
+<p>Spring AI 项目提供了一个 Evaluator API，它目前可以访问评估模型响应的基本策略。有关详细信息，请遵循评估测试(<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/api/testing.html)%E6%96%87%E6%A1%A3%E3%80%82">https://docs.spring.io/spring-ai/reference/api/testing.html)文档。</a></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/avatar.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/avatar.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">Re-xy</div><div class="post-copyright__author_desc">正在运行...</div></div><div class="post-copyright__post__info"><a class="post-copyright__reprint" title="该文章为转载文章，注意版权协议" href="https://xyre.online/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/">转载</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://xyre.online/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/')">Spring AI之概述-AI概念</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/qrcode-wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/qrcode-wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://xyre.online/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=undefined&amp;url=https://xyre.online/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/&amp;pic=undefined" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文遵循 CC BY-NC-SA 4.0 许可协议</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Spring AI之概述-AI概念<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2025/05/29/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9C%A8%E7%BA%BF%E6%9D%A1%E7%A0%81%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">在线条码生成工具</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://twikoo-magic.oss-cn-hangzhou.aliyuncs.com/Tieba-New/image_emoticon95.png" alt="status"/></div></div><div class="author-info__description">Xyre的个人博客</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Xyre</h1><div class="author-info__desc">正在运行...</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/ReappealXy" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1409387267" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来看我的博客鸭~</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/30/Spring%20AI/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/" title="Spring AI之概述-AI概念">Spring AI之概述-AI概念</a><time datetime="2025-05-30T13:33:49.000Z" title="发表于 2025-05-30 21:33:49">2025-05-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/29/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9C%A8%E7%BA%BF%E6%9D%A1%E7%A0%81%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7/" title="在线条码生成工具">在线条码生成工具</a><time datetime="2025-05-29T03:39:15.000Z" title="发表于 2025-05-29 11:39:15">2025-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/29/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E7%89%9B%E4%BA%BA%E5%BF%AB%E8%B7%91-%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E7%9A%84%E6%B1%82%E8%81%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" title="牛人快跑 - 一款开源的求职自动化工具">牛人快跑 - 一款开源的求职自动化工具</a><time datetime="2025-05-29T03:36:55.000Z" title="发表于 2025-05-29 11:36:55">2025-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/29/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BB-JetBrains-%E5%85%A8%E5%AE%B6%E6%A1%B6/" title="一键激活 JetBrains 全家桶">一键激活 JetBrains 全家桶</a><time datetime="2025-05-29T03:31:57.000Z" title="发表于 2025-05-29 11:31:57">2025-05-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/29/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%AE%9E%E6%97%B6%E5%B7%A5%E8%B5%84%E8%AE%A1%E7%AE%97%E5%99%A8/" title="实时工资计算器">实时工资计算器</a><time datetime="2025-05-29T03:28:57.000Z" title="发表于 2025-05-29 11:28:57">2025-05-29</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 By Xyre</div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/Rexy%20%E4%B8%8D%E6%83%B3%E4%B8%8A%E7%8F%AD--xy%20" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><div class="footer_custom_text">© 2025 Re-xy. All rights reserved.</div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a></p></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">70</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">49</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">6</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI-Song-Maker-%E5%9C%A8%E7%BA%BFAI%E6%AD%8C%E6%9B%B2%E7%94%9F%E6%88%90%E5%99%A8/" style="font-size: 0.88rem;">AI Song Maker-在线AI歌曲生成器<sup>1</sup></a><a href="/tags/CSDN%E6%96%87%E7%AB%A0%E8%A7%A3%E9%94%81%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">CSDN文章解锁工具<sup>1</sup></a><a href="/tags/Char%E5%92%8CCharacter/" style="font-size: 0.88rem;">Char和Character<sup>1</sup></a><a href="/tags/Chrome%E4%B8%80%E9%94%AE%E8%A7%A3%E9%99%A4%E5%A4%8D%E5%88%B6/" style="font-size: 0.88rem;">Chrome一键解除复制<sup>1</sup></a><a href="/tags/ComicBrief-AI%E6%BC%AB%E7%94%BB%E7%94%9F%E6%88%90%E5%99%A8/" style="font-size: 0.88rem;">ComicBrief-AI漫画生成器<sup>1</sup></a><a href="/tags/DeepWiki-github%E7%99%BE%E7%A7%91%E5%85%A8%E4%B9%A6/" style="font-size: 0.88rem;">DeepWiki-github百科全书<sup>1</sup></a><a href="/tags/Deskreen-%E7%94%B5%E8%84%91%E6%97%A0%E7%BA%BF%E5%89%AF%E5%B1%8F%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">Deskreen-电脑无线副屏工具<sup>1</sup></a><a href="/tags/Excel%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99/" style="font-size: 0.88rem;">Excel自动填写<sup>1</sup></a><a href="/tags/FastFind-%E5%85%A8%E7%9B%98%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6/" style="font-size: 0.88rem;">FastFind-全盘文件搜索软件<sup>1</sup></a><a href="/tags/Get-Z-Library/" style="font-size: 0.88rem;">Get Z-Library<sup>1</sup></a><a href="/tags/HTTP/" style="font-size: 0.88rem;">HTTP<sup>1</sup></a><a href="/tags/InputTip-%E4%B8%80%E4%B8%AA%E5%AE%9E%E6%97%B6%E7%9A%84%E8%BE%93%E5%85%A5%E6%B3%95%E7%8A%B6%E6%80%81%E6%8F%90%E7%A4%BA%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">InputTip-一个实时的输入法状态提示工具<sup>1</sup></a><a href="/tags/Integer%E5%92%8Cint/" style="font-size: 0.88rem;">Integer和int<sup>1</sup></a><a href="/tags/Java/" style="font-size: 0.88rem;">Java<sup>1</sup></a><a href="/tags/Java%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 0.88rem;">Java面试题<sup>1</sup></a><a href="/tags/Mindows-%E7%BB%99%E4%BD%A0%E7%9A%84Android%E5%88%B7%E4%B8%8AWindows/" style="font-size: 0.88rem;">Mindows-给你的Android刷上Windows<sup>1</sup></a><a href="/tags/MyPublicWiFi-%E2%80%93-%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%97%A0%E7%BA%BF%E7%83%AD%E7%82%B9%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">MyPublicWiFi – 功能强大的无线热点共享工具<sup>1</sup></a><a href="/tags/NovaAI%E5%B7%A5%E5%85%B7%E7%AE%B1/" style="font-size: 0.88rem;">NovaAI工具箱<sup>1</sup></a><a href="/tags/PortableApps%EF%BC%88%E4%BE%BF%E6%90%BA%E5%BC%8F%E5%BA%94%E7%94%A8%EF%BC%89%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99/" style="font-size: 0.88rem;">PortableApps（便携式应用）一个免费的软件下载网站<sup>1</sup></a><a href="/tags/Servlet/" style="font-size: 0.88rem;">Servlet<sup>1</sup></a><a href="/tags/Spring-AI%E4%B9%8B%E6%A6%82%E8%BF%B0-AI%E6%A6%82%E5%BF%B5/" style="font-size: 0.88rem;">Spring AI之概述-AI概念<sup>1</sup></a><a href="/tags/TrimSpace-%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">TrimSpace-免费在线图片处理工具<sup>1</sup></a><a href="/tags/ZIPCracker-%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">ZIPCracker-强大的文件密码破解工具<sup>1</sup></a><a href="/tags/animefeet/" style="font-size: 0.88rem;">animefeet<sup>1</sup></a><a href="/tags/chatgpt/" style="font-size: 0.88rem;">chatgpt<sup>1</sup></a><a href="/tags/deepseek/" style="font-size: 0.88rem;">deepseek<sup>1</sup></a><a href="/tags/remove-photos/" style="font-size: 0.88rem;">remove.photos<sup>1</sup></a><a href="/tags/win%E7%B3%BB%E7%BB%9F%E6%A1%8C%E9%9D%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">win系统桌面管理工具<sup>1</sup></a><a href="/tags/zPaste-Windows%E5%89%AA%E5%88%87%E6%9D%BF%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">zPaste-Windows剪切板管理工具<sup>1</sup></a><a href="/tags/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BB-JetBrains-%E5%85%A8%E5%AE%B6%E6%A1%B6/" style="font-size: 0.88rem;">一键激活 JetBrains 全家桶<sup>1</sup></a><a href="/tags/%E4%B8%8A%E7%8F%AD%E7%9C%8B%E5%B0%8F%E8%AF%B4%E9%98%85%E8%AF%BB%E5%99%A8-%E9%9A%90%E8%94%BD%E5%BC%8F%E5%B0%8F%E8%AF%B4%E9%98%85%E8%AF%BB%E5%99%A8/" style="font-size: 0.88rem;">上班看小说阅读器-隐蔽式小说阅读器<sup>1</sup></a><a href="/tags/%E4%BB%A3%E7%A0%81%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">代码美化<sup>1</sup></a><a href="/tags/%E5%9C%A8%E7%BA%BF%E6%9D%A1%E7%A0%81%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">在线条码生成工具<sup>1</sup></a><a href="/tags/%E5%9C%A8%E7%BA%BF%E7%94%B5%E5%AD%90%E4%B9%A6%E9%98%85%E8%AF%BB/" style="font-size: 0.88rem;">在线电子书阅读<sup>1</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0%E9%80%9A%E8%87%AA%E5%8A%A8%E5%88%B7%E9%A2%98/" style="font-size: 0.88rem;">学习通自动刷题<sup>1</sup></a><a href="/tags/%E5%AE%9E%E6%97%B6%E5%B7%A5%E8%B5%84%E8%AE%A1%E7%AE%97%E5%99%A8/" style="font-size: 0.88rem;">实时工资计算器<sup>1</sup></a><a href="/tags/%E5%B0%8F%E6%97%BAAI%E6%88%AA%E5%9B%BE/" style="font-size: 0.88rem;">小旺AI截图<sup>1</sup></a><a href="/tags/%E6%96%87%E6%A1%88%E6%8F%90%E5%8F%96%E5%8A%A9%E6%89%8B/" style="font-size: 0.88rem;">文案提取助手<sup>1</sup></a><a href="/tags/%E7%89%9B%E4%BA%BA%E5%BF%AB%E8%B7%91-%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E7%9A%84%E6%B1%82%E8%81%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">牛人快跑 - 一款开源的求职自动化工具<sup>1</sup></a><a href="/tags/%E8%9E%BA%E8%9B%B3%E7%B2%89%E7%81%AB%E9%94%85/" style="font-size: 0.88rem;">螺蛳粉火锅<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("03/11/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2025 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Xyre 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("03/11/2025 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/Rexy%20%E4%B8%8D%E6%83%B3%E4%B8%8A%E7%8F%AD--xy%20";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'your-env-id',
+      region: 'ap-shanghai',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'your-env-id',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'your-env-id',
+        region: 'ap-shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
